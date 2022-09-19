@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------ Header -------------------------- */
+header {
+    margin: 30px auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ------------------------ Image Gallery Container -------------------------- */
+.gallery-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto 20px;
+    max-width: 1600px;
+    width: 100%;
+    gap: 5px;
+}
+
+.gallery-container .column {
+    width: 22%;
+}
+
+.column img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    flex-grow: 1;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.column img:hover {
+    transform: scale(1.029);
+}
+
+/* ------------------------ Responsive For Tab --------------------------- */
+@media (max-width: 700px) {
+    .gallery-container {
+        margin: auto 5px;
+    }
+
+    .gallery-container .column {
+        flex: 33%;
+        max-width: calc(49.7% - 5px);
+    }
+}
+
+/* ------------------------ Responsive For Phone --------------------------- */
+@media (max-width: 480px) {
+    .gallery-container {
+        margin: auto 5px;
+    }
+
+    .gallery-container .column {
+        flex: 100%;
+        max-width: calc(98% - 13px);
+    }
+}
